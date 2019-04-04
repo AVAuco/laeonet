@@ -1,5 +1,10 @@
 # LAEO-Net
-Support code for LAEO-Net paper
+
+<div align="center">
+    <img src="./LAEO.png" alt="The LAEO-Net architecture" height="480">
+</div>
+
+Support code for LAEO-Net paper (CVPR'2019).
 
 Code and models will be available soon.
 
