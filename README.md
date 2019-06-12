@@ -20,6 +20,11 @@ python mains/ln_demo_test.py
 
 *Training code will be available soon.*
 
+### Install
+
+The saved models require a specific version of libraries to be loaded properly. See the [LAEO-Net Wiki](https://github.com/AVAuco/laeonet/wiki) for details. 
+For example, it is known not to work with versions of Python greater than 3.5.x.
+
 ### References
 ```
 @inproceedings{marin19cvpr,
