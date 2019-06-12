@@ -45,7 +45,10 @@ argv = sys.argv[1:]
 winlen = 10            # Fixed: temporal length
 
 # Define path to file containing the model
+ # Model trained on UCO
 modelpath = homedir + "/models/model-hmaps-truco.hdf5"
+ # Model trained on AVA
+#modelpath = homedir + "/models/model-hmaps-trava.hdf5"
 
 # Load model into memory
 model = load_model(modelpath)
@@ -57,13 +60,14 @@ imagesdir= homedir +"/data/ava_val_crop/"
 # Select the example
 # ===========================
 # The followings are LAEO
-#basename = "om_83F5VwTQ_01187_0000_pair_51_49"
+basename = "om_83F5VwTQ_01187_0000_pair_51_49"
 #basename = "covMYDBa5dk_01024_0000_pair_37_35"
 #basename = "7T5G0CmwTPo_00936_0000_pair_20_19"
-basename = "914yZXz-iRs_01549_0000_pair_192_194"
+#basename = "914yZXz-iRs_01549_0000_pair_192_194"
 
 # The followings are not LAEO
 #basename = "914yZXz-iRs_01569_0000_pair_196_195"
+#basename = "SCh-ZImnyyk_00902_0000_pair_1_0"
 
 pairspath = os.path.join(imagesdir, basename + ".jpg")
 mapspath = os.path.join(imagesdir, basename + "_map.jpg")
