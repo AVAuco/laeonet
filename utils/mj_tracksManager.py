@@ -3,7 +3,6 @@ __author__ = "Manuel J Marin-Jimenez"
 
 import os
 from scipy.io import loadmat
-from mj_avagoogleConfig import AvaGoogledb
 
 import numpy as np
 
@@ -134,33 +133,4 @@ class TracksManager(object):
 
 
 
-# ========== MAIN ===========
-if __name__ == '__main__':
 
-    import os
-
-    avadb = AvaGoogledb(case_wanted="train", basedir="/home/mjmarin/experiments/ava")
-
-    videoname = "AYebXQ8eUkM"
-
-    clipnumber = "00917"
-
-    shotfile = os.path.join(avadb.shots_path, videoname, clipnumber+"_shots.txt")
-
-    from mj_shotsManager import ShotsManager
-
-    sm = ShotsManager(shotfile)
-
-    print(sm.shots)
-
-    # Read tracks per shot
-    nshots = sm.nshots
-    for six in range(0,nshots):
-        shot = sm.getShot(six)
-        tracksfile =  os.path.join(avadb.head_tracks, videoname,
-                                   clipnumber+"_shot{:s}_{:s}.mat".format(shot[0], shot[1]) )
-
-        tm = TracksManager(tracksfile)
-
-        ntracks = tm.ntracks
-        print(tm.getTrackScore(0))
