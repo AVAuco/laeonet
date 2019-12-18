@@ -20,6 +20,17 @@ python mains/ln_demo_test.py
 
 *Training code will be available soon.*
 
+### Detecting and tracking heads
+
+The following block shows how to run a more complete demo where, given a video file, head detection, tracking and LAEO classification is applied.
+
+```python
+cd laeonet
+python mains/ln_demo_det_track_laeo.py
+```
+
+Note that the detector provided in directory `laeonet-head-det-track` corresponds to a re-implementation of the Matlab's one originally used for the CVPR publication. Therefore, some results might differ a bit.
+
 ### Install
 
 The saved models require a specific version of libraries to be loaded properly. See the [LAEO-Net Wiki](https://github.com/AVAuco/laeonet/wiki) for details. 
