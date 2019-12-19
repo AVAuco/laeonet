@@ -326,7 +326,7 @@ def display_tracks(video_path, tracks, verbose=False):
     colors = np.random.randint(256, size=(len(tracks), 3)) # random list of colors
     while vcap.grab():
         if verbose:
-            print("Displaying track for frame %s..." % frame_idx)
+            print("Displaying track at frame %s..." % frame_idx)
 
         # Read frame from video
         ret, frame = vcap.retrieve()
@@ -337,8 +337,8 @@ def display_tracks(video_path, tracks, verbose=False):
                 box_idx = np.where(track[0][:][:, 0] == frame_idx)[0]
                 if len(box_idx) > 0:
                     box_idx = box_idx[0]
-                    print(track[0][box_idx][1:5])
-                    # current_axis = plt.gca()
+                    if verbose:
+                        print(track[0][box_idx][1:5])
                     xmin = track[0][box_idx][1]
                     ymin = track[0][box_idx][2]
                     xmax = track[0][box_idx][3]
@@ -356,6 +356,8 @@ def display_tracks(video_path, tracks, verbose=False):
         else:
             print("Could not read frame {}".format(frame_idx))
 
+    # Release video input
+    print('Reached end of video.')
     vcap.release()
 
 
@@ -383,7 +385,7 @@ def process_video(video_path, sanity_checks=False, verbose=False, framesdir=None
         if 'tracksbf__' in locals(): tracksbf__.clear()
         if 'tracks' in locals(): tracks.clear()
 
-        tracksb__ = track_forwards_backwards(detections, 0, len(detections),  tracking_case='backwards', verbose=verbose) # TODO aquimequedo
+        tracksb__ = track_forwards_backwards(detections, 0, len(detections),  tracking_case='backwards', verbose=verbose)
         tracksbf__ = track_forwards_backwards(detections, 0, len(detections), OUT_TRACKS=tracksb__, tracking_case='forwards', verbose=verbose)
         tracks = process_tracks_parameters(tracksbf__)
 
