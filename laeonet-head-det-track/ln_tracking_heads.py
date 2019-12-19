@@ -359,6 +359,7 @@ def display_tracks(video_path, tracks, verbose=False):
     # Release video input
     print('Reached end of video.')
     vcap.release()
+    cv2.destroyAllWindows()
 
 
 def process_video(video_path, sanity_checks=False, verbose=False, framesdir=None):
