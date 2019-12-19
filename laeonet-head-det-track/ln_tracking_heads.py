@@ -347,7 +347,7 @@ def display_tracks(video_path, tracks, verbose=False):
                     # Draw bounding box
                     cv2.rectangle(frame, (xmin, ymin), (xmax, ymax), color, thickness=2)
                 else:
-                    print("No matching bbox for frame with number {}".format(box_idx))
+                    print("No matching bbox for frame {} in track {}".format(frame_idx, track_idx))
                     continue
             # Display resulting frame
             cv2.imshow("image", frame)
