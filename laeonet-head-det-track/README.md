@@ -20,7 +20,7 @@ chmod +x ./data/models/detector/download_model_py3.Y.sh
 ./data/models/detector/download_model_py3.Y.sh
 
 # Run the demo script
-# Replace <video_file> with 'handShake_0001.avi', 'handShake_0013.avi' or 'highFive_0018.avi'
+# Replace <video_file> with 'handShake_0001.avi', 'highFive_0005.avi', 'highFive_0016.avi' or 'highFive_0018.avi'
 python ln_tracking_heads.py --video_path data/videos/<video_file> [--verbose 0|1]
 ```
 
