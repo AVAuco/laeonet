@@ -89,8 +89,7 @@ def generate_detections(video_path, verbose=False, outputdir=None):
         export = False
     else:
         export = True
-        if not os.path.exists(outputdir):
-            os.makedirs(outputdir)
+        make_if_not_exist(outputdir)
 
     # Begin detection
     dets_dict = {}
