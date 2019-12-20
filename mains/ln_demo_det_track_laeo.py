@@ -70,6 +70,7 @@ windowLenMap = 1
 
 # Load model
 model = load_model(modelfile)
+model._make_predict_function()
 
 # ========== MAIN ===========
 
