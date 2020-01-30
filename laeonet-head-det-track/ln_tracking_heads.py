@@ -385,7 +385,7 @@ def process_video(video_path, sanity_checks=False, verbose=False, framesdir=None
         if 'tracksbf__' in locals(): tracksbf__.clear()
         if 'tracks' in locals(): tracks.clear()
 
-        tracksb__ = track_forwards_backwards(detections, 0, len(detections),  tracking_case='backwards', verbose=verbose)
+        tracksb__ = track_forwards_backwards(detections, 0, len(detections),  OUT_TRACKS=[], tracking_case='backwards', verbose=verbose)
         tracksbf__ = track_forwards_backwards(detections, 0, len(detections), OUT_TRACKS=tracksb__, tracking_case='forwards', verbose=verbose)
         tracks = process_tracks_parameters(tracksbf__)
 
