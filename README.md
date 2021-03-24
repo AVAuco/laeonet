@@ -1,5 +1,7 @@
 # LAEO-Net
 
+## NEW VERSION [here: LAEO-Net++](https://github.com/AVAuco/laeonetplus/)
+
 Support code for [LAEO-Net paper](http://openaccess.thecvf.com/content_CVPR_2019/papers/Marin-Jimenez_LAEO-Net_Revisiting_People_Looking_at_Each_Other_in_Videos_CVPR_2019_paper.pdf) (CVPR'2019).
 
 <div align="center">
